@@ -5,6 +5,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.integer :age
       t.string :gender
 
+
       t.timestamps
     end
   end
