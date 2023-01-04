@@ -1,6 +1,6 @@
 <%= turbo_frame_tag id="tweet_#{@tweet.id}" do %>
   <%= button_to 'Unlike', 
-                  tweet_like_path(@tweet, @like, like: {user_id: current_user.id, tweet_id: tweet.id}),
+                  tweet_like_path(@tweet, @like, like: {user_id: current_user.id, tweet_id: @tweet.id}),
                   method: :delete
                   %>
 <% end %>
