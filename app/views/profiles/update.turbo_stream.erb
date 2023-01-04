@@ -1,0 +1,8 @@
+<%= turbo_stream.update "profile" do %>
+  <%= turbo_frame_tag id="edit_profile" do %>
+    <div>Name: <%= @user.profile.name %> </div>
+    <div>Age: <%= @user.profile.age %> </div>
+    <div>Bio: <%= @user.profile.bio %> </div>
+    <%= link_to 'Edit Profile', edit_profile_path %> 
+  <% end %>
+<% end %>

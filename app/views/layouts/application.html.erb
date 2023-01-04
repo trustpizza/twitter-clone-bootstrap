@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BootstrapTwitter</title>
+    <title>Twitter Clone</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <style>
+      .gravatar-nav {
+        height: 25px;
+        width: auto;
+        border-radius: 50%;
+      }
+
+      .gravatar {
+        height: auto;
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      .gravatar-home {
+        height: 50px;
+        width: auto;
+        border-radius: 50%;
+      }
+
+      .gravatar-comment {
+        height: 35px;
+        width: auto;
+        border-radius: 50%;
+      }
+
+      .delete-button svg:hover {
+        color: red;
+        transform: scale(1.5);
+      }
+    </style>
+
   </head>
 
   <body>
+    <%= render 'shared/header' %>
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>
